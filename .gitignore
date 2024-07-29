@@ -1,3 +1,9 @@
+# Docs directory
 docs
 
+# Dependency directories
 node_modules
+
+
+# Logs
+.DS_Store
