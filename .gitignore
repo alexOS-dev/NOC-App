@@ -4,7 +4,13 @@ docs
 # Dependency directories
 node_modules
 
+# Build files
+dist
 
 # Logs
 logs
 .DS_Store
+
+# Environment variables
+.env
+.env.local
