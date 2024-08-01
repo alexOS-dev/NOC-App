@@ -1,4 +1,4 @@
-import { EmailService } from '../../../presentation/email/email.service';
+import { EmailService } from '../../../presentation';
 import { LogEntity, LogSeverityLevel } from '../../entities';
 import { LogRepository } from '../../repository';
 
