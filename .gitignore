@@ -17,3 +17,6 @@ logs
 
 # MongoDB data directory
 /mongo
+
+# Postgres data directory
+/postgres
