@@ -16,4 +16,4 @@ logs
 .env.local
 
 # MongoDB data directory
-mongo
+/mongo
