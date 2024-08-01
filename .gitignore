@@ -14,3 +14,6 @@ logs
 # Environment variables
 .env
 .env.local
+
+# MongoDB data directory
+mongo
