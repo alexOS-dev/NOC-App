@@ -1,5 +1,5 @@
 import { envs } from './config/plugins';
-import { LogModel, MongoDatabase } from './data/mongo';
+import { MongoDatabase } from './data/mongo';
 import { Server } from './presentation';
 
 (async () => {
@@ -12,5 +12,23 @@ async function main() {
     dbName: envs.MONGO_NAME,
   });
 
-  Server.start();
+  // Create Log
+  // const newLog = await prisma.logModel.create({
+  //   data: {
+  //     message: 'Log created from Prisma',
+  //     level: 'LOW',
+  //     origin: 'app.ts',
+  //   },
+  // });
+  // console.log({ newLog });
+
+  // View Logs
+  // const logs = await prisma.logModel.findMany({
+  //   where: {
+  //     id: 1,
+  //   },
+  // });
+  // console.log(logs);
+
+  // Server.start();
 }
