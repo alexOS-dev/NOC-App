@@ -8,7 +8,7 @@ node_modules
 dist
 
 # Logs
-logs
+/logs
 .DS_Store
 
 # Environment variables
