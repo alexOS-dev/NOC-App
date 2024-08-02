@@ -17,6 +17,11 @@ dist
 
 # MongoDB data directory
 /mongo
+/mongo-test
 
 # Postgres data directory
 /postgres
+/postgres-test
+
+# Test coverage
+/coverage

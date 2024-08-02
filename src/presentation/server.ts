@@ -36,14 +36,14 @@ export class Server {
     // const logs = await logRepository.getLogs(LogSeverityLevel.low);
     // console.log(logs);
 
-    CronService.createJob('*/5 * * * * *', () => {
-      const url = 'https://www.google.com';
-      // const url = 'http//localhost:3000';
-      new CheckServiceMultiple(
-        [fslogRepository, mongoLogRepository, postgresLogRepository],
-        () => console.log(`${url} is ok`),
-        (error) => console.log(error)
-      ).execute(url);
-    });
+    // CronService.createJob('*/5 * * * * *', () => {
+    //   const url = 'https://www.google.com';
+    //   // const url = 'http//localhost:3000';
+    //   new CheckServiceMultiple(
+    //     [fslogRepository, mongoLogRepository, postgresLogRepository],
+    //     () => console.log(`${url} is ok`),
+    //     (error) => console.log(error)
+    //   ).execute(url);
+    // });
   }
 }
