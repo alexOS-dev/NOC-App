@@ -30,12 +30,10 @@ export class LogEntity {
     json = json === '' ? '{}' : json;
     const { message, level, createdAt, origin } = JSON.parse(json);
 
-    if (!message || !level || !createdAt) throw new Error('Invalid JSON');
-
     const log = new LogEntity({
       message,
       level,
-      createdAt,
+      createdAt: new Date(createdAt),
       origin,
     });
     log.createdAt = new Date(createdAt);
@@ -46,8 +44,6 @@ export class LogEntity {
   // This method is used to convert the LogEntity instance to a JSON string
   static fromObject = (object: { [key: string]: any }): LogEntity => {
     const { message, level, createdAt, origin } = object;
-
-    if (!message || !level || !createdAt) throw new Error('Invalid object');
 
     const log = new LogEntity({
       message,
