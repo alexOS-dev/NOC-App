@@ -25,5 +25,10 @@ describe('log.datasource.ts', () => {
     expect(typeof mockLogDataSource.getLogs).toBe('function');
 
     await mockLogDataSource.saveLog(newLog);
+
+    const logs = await mockLogDataSource.getLogs(LogSeverityLevel.low);
+
+    expect(logs).toHaveLength(1);
+    expect(logs[0]).toBeInstanceOf(LogEntity);
   });
 });
