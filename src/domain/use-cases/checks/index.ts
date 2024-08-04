@@ -1,2 +1,2 @@
-export * from './check-service-multiple.ts';
+export * from './check-service-multiple';
 export * from './check-service';
