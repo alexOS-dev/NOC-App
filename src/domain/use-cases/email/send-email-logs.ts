@@ -20,7 +20,7 @@ export class SendEmailLogs implements SendLogEmailUseCase {
 
       const log = new LogEntity({
         level: LogSeverityLevel.low,
-        message: 'Email sent',
+        message: 'Log email sent',
         origin: 'send-email-logs.ts',
       });
       this.logRepository.saveLog(log);
@@ -29,7 +29,7 @@ export class SendEmailLogs implements SendLogEmailUseCase {
     } catch (error) {
       const log = new LogEntity({
         level: LogSeverityLevel.high,
-        message: 'Email not sent',
+        message: 'Error: Email log not sent',
         origin: 'send-email-logs.ts',
       });
       this.logRepository.saveLog(log);
